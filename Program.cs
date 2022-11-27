@@ -6,6 +6,8 @@ public class Program
       FlightData flightData = new FlightData();
       Payment payment = new Payment();
       Reserve reserve = new Reserve();
+      SignUp signup = new SignUp();
+      Login login = new Login();
     }
     public static void ChooseLoginOrSignUp()
     {
@@ -28,12 +30,12 @@ public class Program
         if(Type == 1)
         {
           // Test
-          Console.WriteLine("1");
+          ShowLoginUI();
         }
         else if (Type == 2)
         {
           // Test
-          Console.WriteLine("2");
+           ShowSignUpUI();
         }
         else
         {
@@ -55,6 +57,7 @@ static void BackToMenu()
         Console.WriteLine(" Username: ");
         Console.WriteLine(" Password: ");
         Console.WriteLine("--------------------");
+        Program.login.RunLogin(signup);
     }
     public static void ShowSignUpUI()
     {
@@ -64,12 +67,14 @@ static void BackToMenu()
         Console.WriteLine(" Username: ");
         Console.WriteLine(" Password: ");
         Console.WriteLine("--------------------");
+        Program.signup.RunSignUp();
     }
     public static void ShowReserveUI()
     {
     Console.Clear();
     Console.WriteLine(" Payment List ");
     Console.WriteLine("--------------------");
+    Program.reserve.GetTripMutipler();
     }
      public static void ShowPaymentUI()
     {
