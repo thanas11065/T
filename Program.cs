@@ -42,7 +42,7 @@ public class Program
         Console.WriteLine("Try Again!!");
         }
     }
-    BlackToMenu();
+    BackToMenu();
 }
 static void BackToMenu()
     {
